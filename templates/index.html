@@ -26,6 +26,8 @@
                     <section class="post">
                         <header class="post-header">
                             <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                            {% if article.photo_image %}<a href="{{ SITEURL    }}/{{ article.url }}"><img class="post-thumb" src="{{ SITEURL }}/{{ article.photo_image[2] }}" /></a>
+                            {% endif %}
                             <p class="post-meta">{{ article.summary }}</p>
                         {% if HIDE_CATEGORIES %}
                             <p class="post-meta">// under {% for tag in article.tags %}
