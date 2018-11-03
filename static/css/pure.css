@@ -172,6 +172,13 @@ pre {
     font-size: 110%;
     line-height: 1.45;
     color: #333332;
+  background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,1)), url(https://cdn.stocksnap.io/img-thumbs/960w/6HPVTKIYMP.jpg); 
+    color: #333332;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .post {
