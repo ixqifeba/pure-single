@@ -45,36 +45,38 @@
                 {%- else -%}
                 style="background: none repeat scroll 0% 0% #3D4F5D"
                 {%- endif -%}>
-                <div class="cover-body">
-                    <header class="header">
-                        <hgroup>
-                            {% if PROFILE_IMG_URL %}
-                            <img class="avatar" src="{{ PROFILE_IMG_URL }}">
-                            {% endif %}
-                            <h1 class="brand-main"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-                            <p class="tagline">{{ TAGLINE }}</p>
-                            {% for title, link in MENUITEMS %}
-                                <p class="links"><a href="{{ link }}">{{ title }}</a></p>
-                            {% endfor %}
-                            {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for page in PAGES %}
-                                <p class="links"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></p>
-                            {% endfor %}
-                            {% endif %}
-                            {% if DISPLAY_CATEGORIES_ON_MENU %}
-                            {% for cat, null in CATEGORIES %}
-                                <p class="links"><a href="{{ SITEURL }}/{{ cat }}/">{{ cat }}</a></p>
-                            {% endfor %}
-                            {% endif %}
-                                <p class="social">
-                            {% for title, link in SOCIAL %}
-                                    <a href="{{ link }}">
-                                        <i class="fa fa-{{ title }} fa-3x"></i>
-                                    </a>
-                            {% endfor %}
-                                </p>
-                        </hgroup>
-                    </header>
+                <div class="cover-img-overlay">
+                    <div class="cover-body">
+                        <header class="header">
+                            <hgroup>
+                                {% if PROFILE_IMG_URL %}
+                                <img class="avatar" src="{{ PROFILE_IMG_URL }}">
+                                {% endif %}
+                                <h1 class="brand-main"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                                <p class="tagline">{{ TAGLINE }}</p>
+                                {% for title, link in MENUITEMS %}
+                                    <p class="links"><a href="{{ link }}">{{ title }}</a></p>
+                                {% endfor %}
+                                {% if DISPLAY_PAGES_ON_MENU %}
+                                {% for page in PAGES %}
+                                    <p class="links"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></p>
+                                {% endfor %}
+                                {% endif %}
+                                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                                {% for cat, null in CATEGORIES %}
+                                    <p class="links"><a href="{{ SITEURL }}/{{ cat }}/">{{ cat }}</a></p>
+                                {% endfor %}
+                                {% endif %}
+                                    <p class="social">
+                                {% for title, link in SOCIAL %}
+                                        <a href="{{ link }}">
+                                            <i class="fa fa-{{ title }} fa-3x"></i>
+                                        </a>
+                                {% endfor %}
+                                    </p>
+                            </hgroup>
+                        </header>
+                    </div>
                 </div>
             </div>
         </div>
