@@ -29,15 +29,17 @@
                             {% if article.photo_image %}<a href="{{ SITEURL    }}/{{ article.url }}"><img class="post-thumb" src="{{ SITEURL }}/{{ article.photo_image[2] }}" /></a>
                             {% endif %}
                             <p class="post-meta">{{ article.summary }}</p>
-                        {% if HIDE_CATEGORIES %}
+                        {% if POSTS_LIST == 'tags' %}
                             <p class="post-meta">// under {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                                 {% endfor %} &middot; {{ article.locale_date }}
                             </p>
-                        {% else %}
+                        {% elif POSTS_LIST == 'category' %}
                             <p class="post-meta">
                                 in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> &middot; {{ article.locale_date }}
                             </p>
+                        {% else %}
+                            <p class="post-meta"> {{ article.locale_date }}</p>
                         {% endif %}
                         </header>
                     </section>
