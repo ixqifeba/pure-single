@@ -23,7 +23,6 @@
                         {% set latex = True %}
                         {{ article.latex }}
                     {% endif %}
-                    {% if article.category == DEFAULT_CATEGORY %}
                     <section class="post">
                         <header class="post-header">
                             <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
@@ -44,7 +43,6 @@
                         {% endif %}
                         </header>
                     </section>
-                    {% endif %}
                 {% endfor %}
                 {% include 'pagination.html' %}
                 {% include 'footer.html' %}
