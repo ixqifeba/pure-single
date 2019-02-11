@@ -64,7 +64,9 @@
                                 {% endif %}
                                 {% if DISPLAY_CATEGORIES_ON_MENU %}
                                 {% for cat, null in categories %}
+                                {% if cat != DEFAULT_CATEGORY %}
                                     <p class="links"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></p>
+                                {% endif %}
                                 {% endfor %}
                                 {% endif %}
                                     <p class="social">
